@@ -1,7 +1,6 @@
 <template>
   <div class="p-4">
     <NButton type="primary" @click="handleClick">获取数据</NButton>
-
     <Suspense v-if="visible">
       <main class="mt-4">
         <AsyncComponent />
