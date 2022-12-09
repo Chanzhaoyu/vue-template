@@ -4,6 +4,7 @@ specifiers:
   '@rushstack/eslint-patch': ^1.1.4
   '@types/jsdom': ^20.0.1
   '@types/node': ^18.11.9
+  '@vicons/ionicons4': ^0.12.0
   '@vitejs/plugin-vue': ^3.2.0
   '@vitejs/plugin-vue-jsx': ^2.1.1
   '@vue/eslint-config-prettier': ^7.0.0
@@ -44,6 +45,7 @@ devDependencies:
   '@rushstack/eslint-patch': 1.2.0
   '@types/jsdom': 20.0.1
   '@types/node': 18.11.11
+  '@vicons/ionicons4': 0.12.0
   '@vitejs/plugin-vue': 3.2.0_vite@3.2.5+vue@3.2.45
   '@vitejs/plugin-vue-jsx': 2.1.1_vite@3.2.5+vue@3.2.45
   '@vue/eslint-config-prettier': 7.0.0_wdw3qg4p7crmsoaizcyntelyni
@@ -792,6 +794,10 @@ packages:
     dependencies:
       '@typescript-eslint/types': 5.45.1
       eslint-visitor-keys: 3.3.0
+    dev: true
+
+  /@vicons/ionicons4/0.12.0:
+    resolution: {integrity: sha512-i+7YwlpCrqD6m9esbZLy1bpVQlh4CKugtS3OzgfNw6BLTQQK6HT7drktaJgcESj/BTr4avdNbAtMQXx56wSVMg==}
     dev: true
 
   /@vitejs/plugin-vue-jsx/2.1.1_vite@3.2.5+vue@3.2.45:
