@@ -12,7 +12,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
 import { NButton } from "naive-ui";
 import { useAsyncComponent } from "@/hooks/useAsyncComponent";
 
