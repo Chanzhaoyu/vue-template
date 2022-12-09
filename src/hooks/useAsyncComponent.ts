@@ -3,7 +3,7 @@ import { defineAsyncComponent, h } from 'vue'
 
 export function useAsyncComponent<T = any>(source: AsyncComponentLoader<T>) {
   return defineAsyncComponent({
-    loader: source,
+    loader: source as any,
     loadingComponent: h('div', 'loading...'),
     errorComponent: h('div', 'error'),
     timeout: 3000,
