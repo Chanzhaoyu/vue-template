@@ -1,27 +1,28 @@
 <template>
   <div class="p-4">
-    <div>
-      <NButton @click="handleClick">Open Modal</NButton>
-      <Suspense v-if="show">
-        <template #default>
-          <ImportEditModal v-model:open="visible" />
-        </template>
-      </Suspense>
-    </div>
+    <NButton type="primary" @click="handleClick">获取数据</NButton>
+
+    <Suspense v-if="visible">
+      <main class="mt-4">
+        <AsyncComponent />
+      </main>
+      <template #fallback>
+        <NSpin></NSpin>
+      </template>
+    </Suspense>
   </div>
 </template>
 
 <script setup lang="ts">
-import { NButton } from "naive-ui";
-import { useAsyncComponent } from "@/hooks/useAsyncComponent";
+import { NSpin, NButton } from "naive-ui";
 
-const show = ref<boolean>(false);
+const AsyncComponent = defineAsyncComponent(
+  () => import("./AsyncComponent.vue")
+);
+
 const visible = ref<boolean>(false);
 
-const ImportEditModal = useAsyncComponent(() => import("./EditModal.vue"));
-
 const handleClick = () => {
-  show.value = true;
   visible.value = true;
 };
 </script>
