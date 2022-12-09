@@ -4,6 +4,7 @@
       <NButton type="primary" @click="handleClick">动态加载组件获取数据</NButton>
       <NButton type="primary" @click="open = true">Open Modal</NButton>
       <NButton type="primary" @click="handleToast">Open Toast</NButton>
+      <NButton type="primary" @click="handleTheme">切换主题</NButton>
       <NButton type="error" @click="handleError">错误弹窗</NButton>
     </div>
     <div>
@@ -42,8 +43,11 @@
 <script setup lang="ts">
 import EditModal from '../EditModal.vue'
 import { IosAirplane } from '@vicons/ionicons4'
+import { useAppStore } from '@/stores/app'
 
 const AsyncComponent = defineAsyncComponent(() => import('../AsyncComponent.vue'))
+
+const appStore = useAppStore()
 
 const message = useMessage()
 const dialog = useDialog()
@@ -69,5 +73,9 @@ const handleError = () => {
     content: '错了',
     positiveText: 'Oops!',
   })
+}
+
+const handleTheme = () => {
+  appStore.toggleTheme()
 }
 </script>
