@@ -1,26 +1,16 @@
 <template>
-  <NModal
-    title="编辑"
-    preset="card"
-    v-model:show="visible"
-    style="width: 500px"
-    @close="handleCancel"
+  <BasicModal
+    v-model:open="visible"
+    @onConfirm="handleConfirm"
+    @onCancel="handleCancel"
   >
-    <div>
-      <h1>This is edit modal main</h1>
-    </div>
-    <template #footer>
-      <div class="flex justify-end items-center space-x-4">
-        <NButton @click="handleCancel">取消</NButton>
-        <NButton type="primary" @click="handleConfirm">确定</NButton>
-      </div>
-    </template>
-  </NModal>
+    <div>Hello World</div>
+  </BasicModal>
 </template>
 
 <script setup lang="ts">
-import { NModal, NButton } from "naive-ui";
 import { ref, watch } from "vue";
+import { BasicModal } from "@/components";
 
 const props = defineProps<{
   open: boolean;
@@ -52,7 +42,6 @@ const setVisible = (value: boolean = false) => {
 };
 
 const handleConfirm = () => {
-  setVisible(false);
   emit("onConfirm");
 };
 
