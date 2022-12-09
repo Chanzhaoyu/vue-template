@@ -48,4 +48,6 @@ const handleCancel = () => {
   setVisible(false);
   emit("onCancel");
 };
+
+defineExpose({ setVisible });
 </script>
