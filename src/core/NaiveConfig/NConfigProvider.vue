@@ -21,9 +21,20 @@ import NLayerProvider from './NLayerProvider.vue'
 const themeOverrides: GlobalThemeOverrides = {
   common: {
     successColor: '#60b154',
+    successColorHover: '#4f9346',
+    successColorPressed: '#3e7538',
+
     infoColor: '#2962f1',
+    infoColorHover: '#2960cf',
+    infoColorPressed: '#1f4ead',
+
     warningColor: '#ed8e34',
+    warningColorHover: '#c46d28',
+    warningColorPressed: '#9c501c',
+
     errorColor: '#e54b32',
+    errorColorHover: '#c43826',
+    errorColorPressed: '#a3281c',
   },
 }
 </script>
