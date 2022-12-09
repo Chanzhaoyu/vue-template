@@ -5,6 +5,9 @@ import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import autoImport from "unplugin-auto-import/vite";
 export default defineConfig({
+  define: {
+    __VUE_OPTIONS_API__: false,
+  },
   plugins: [
     vue(),
     vueJsx(),
