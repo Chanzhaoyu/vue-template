@@ -14,8 +14,6 @@
 </template>
 
 <script setup lang="ts">
-import { NSpin, NButton } from "naive-ui";
-
 const AsyncComponent = defineAsyncComponent(
   () => import("./AsyncComponent.vue")
 );
