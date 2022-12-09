@@ -5,5 +5,5 @@
 </template>
 
 <script setup lang="ts">
-import NConfigProvider from '@/core/NConfigProvider.vue'
+import NConfigProvider from '@/core/NaiveConfig/NConfigProvider.vue'
 </script>

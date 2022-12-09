@@ -5,7 +5,7 @@ import { createPinia } from 'pinia'
 
 import App from './App.vue'
 import router from './router'
-import { createNaiveMeta } from './core/naiveMeta'
+import { createNaiveMeta } from './core/NaiveConfig/style-inject'
 
 const app = createApp(App)
 

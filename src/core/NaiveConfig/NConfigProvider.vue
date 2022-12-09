@@ -6,15 +6,16 @@
     preflight-style-disabled
     inline-theme-disabled
   >
-    <NMessageProvider>
+    <NLayerProvider>
       <slot></slot>
-    </NMessageProvider>
+    </NLayerProvider>
   </NConfigProvider>
 </template>
 
 <script lang="ts" setup>
 import type { GlobalThemeOverrides } from 'naive-ui'
-import { NConfigProvider, zhCN, dateZhCN, NMessageProvider } from 'naive-ui'
+import { NConfigProvider, zhCN, dateZhCN } from 'naive-ui'
+import NLayerProvider from './NLayerProvider.vue'
 
 const themeOverrides: GlobalThemeOverrides = {
   common: {
