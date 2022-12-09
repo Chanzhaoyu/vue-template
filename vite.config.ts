@@ -31,8 +31,8 @@ export default defineConfig({
       eslintrc: { enabled: true },
     }),
     autoImportComponents({
+      dirs: [],
       dts: true,
-      exclude: ["node_modules", "dist", "types", "src/components"],
       resolvers: [NaiveUiResolver()],
     }),
   ],

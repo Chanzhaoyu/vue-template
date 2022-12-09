@@ -1,14 +1,9 @@
 <template>
-  <NConfigProvider
-    :locale="zhCN"
-    :date-locale="dateZhCN"
-    preflight-style-disabled
-    inline-theme-disabled
-  >
+  <NConfigProvider>
     <RouterView />
   </NConfigProvider>
 </template>
 
 <script setup lang="ts">
-import { NConfigProvider, zhCN, dateZhCN } from "naive-ui";
+import NConfigProvider from "@/core/NConfigProvider.vue";
 </script>

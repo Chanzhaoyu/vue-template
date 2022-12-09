@@ -5,6 +5,7 @@
     :title="title"
     :style="getStyle"
     @close="handleClose"
+    @mask-click="handleClose"
   >
     <div class="h-full">
       <slot></slot>
@@ -22,7 +23,6 @@
 
 <script setup lang="ts">
 import type { CSSProperties } from "vue";
-import { NModal, NButton } from "naive-ui";
 
 const props = withDefaults(
   defineProps<{
