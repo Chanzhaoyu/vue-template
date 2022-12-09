@@ -1,5 +1,6 @@
 <template>
   <NConfigProvider
+    class="h-full"
     :locale="zhCN"
     :date-locale="dateZhCN"
     :theme-overrides="themeOverrides"
