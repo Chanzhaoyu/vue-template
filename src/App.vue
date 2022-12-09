@@ -3,6 +3,7 @@
     :locale="zhCN"
     :date-locale="dateZhCN"
     preflight-style-disabled
+    inline-theme-disabled
   >
     <RouterView />
   </NConfigProvider>
