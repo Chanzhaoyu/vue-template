@@ -1,2 +1,2 @@
-import BasicModal from "./basic-modal.vue";
-export default BasicModal;
+import BasicModal from './basic-modal.vue'
+export default BasicModal

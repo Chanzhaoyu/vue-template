@@ -12,5 +12,5 @@
 </template>
 
 <script lang="ts" setup>
-import { NConfigProvider, zhCN, dateZhCN, NMessageProvider } from "naive-ui";
+import { NConfigProvider, zhCN, dateZhCN, NMessageProvider } from 'naive-ui'
 </script>

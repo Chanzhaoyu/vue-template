@@ -1,11 +1,11 @@
-import { fileURLToPath, URL } from "node:url";
+import { fileURLToPath, URL } from 'node:url'
 
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
-import vueJsx from "@vitejs/plugin-vue-jsx";
-import autoImport from "unplugin-auto-import/vite";
-import autoImportComponents from "unplugin-vue-components/vite";
-import { NaiveUiResolver } from "unplugin-vue-components/resolvers";
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import vueJsx from '@vitejs/plugin-vue-jsx'
+import autoImport from 'unplugin-auto-import/vite'
+import autoImportComponents from 'unplugin-vue-components/vite'
+import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 
 export default defineConfig({
   define: {
@@ -16,18 +16,13 @@ export default defineConfig({
     vueJsx(),
     autoImport({
       imports: [
-        "vue",
-        "vue-router",
+        'vue',
+        'vue-router',
         {
-          "naive-ui": [
-            "useDialog",
-            "useMessage",
-            "useNotification",
-            "useLoadingBar",
-          ],
+          'naive-ui': ['useDialog', 'useMessage', 'useNotification', 'useLoadingBar'],
         },
       ],
-      dts: "./types/auto-imports.d.ts",
+      dts: './types/auto-imports.d.ts',
       eslintrc: { enabled: true },
     }),
     autoImportComponents({
@@ -38,11 +33,11 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      "@": fileURLToPath(new URL("./src", import.meta.url)),
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
   server: {
     port: 5555,
-    host: "0.0.0.0",
+    host: '0.0.0.0',
   },
-});
+})

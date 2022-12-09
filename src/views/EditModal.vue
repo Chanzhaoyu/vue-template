@@ -1,53 +1,49 @@
 <template>
-  <BasicModal
-    v-model:open="visible"
-    @onConfirm="handleConfirm"
-    @onCancel="handleCancel"
-  >
+  <BasicModal v-model:open="visible" @onConfirm="handleConfirm" @onCancel="handleCancel">
     <div>Hello World</div>
   </BasicModal>
 </template>
 
 <script setup lang="ts">
-import { BasicModal } from "@/components";
+import { BasicModal } from '@/components'
 
 const props = defineProps<{
-  open: boolean;
-}>();
+  open: boolean
+}>()
 
 const emit = defineEmits<{
-  (e: "update:open", visible: boolean): void;
-  (e: "onCancel"): void;
-  (e: "onConfirm"): void;
-}>();
+  (e: 'update:open', visible: boolean): void
+  (e: 'onCancel'): void
+  (e: 'onConfirm'): void
+}>()
 
-const visible = ref(props.open ?? false);
+const visible = ref(props.open ?? false)
 
 watch(
   () => props.open,
   (value) => {
     if (visible.value !== value) {
-      visible.value = value;
+      visible.value = value
     }
   },
   {
     immediate: true,
   }
-);
+)
 
 const setVisible = (value: boolean = false) => {
-  emit("update:open", value);
-  visible.value = value;
-};
+  emit('update:open', value)
+  visible.value = value
+}
 
 const handleConfirm = () => {
-  emit("onConfirm");
-};
+  emit('onConfirm')
+}
 
 const handleCancel = () => {
-  setVisible(false);
-  emit("onCancel");
-};
+  setVisible(false)
+  emit('onCancel')
+}
 
-defineExpose({ setVisible });
+defineExpose({ setVisible })
 </script>
